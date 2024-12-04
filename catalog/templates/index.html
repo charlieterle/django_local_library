@@ -17,7 +17,9 @@
     <li><strong>Copies:</strong> {{ num_instances }}</li>
     <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
     <li><strong>Authors:</strong> {{ num_authors }}</li>
-    <li><strong>History Genres:</strong> {{ num_history_genres }}</li>
-    <li><strong>Books with "Harry Potter" in the title:</strong> {{ num_harry_potter_books }}</li>
   </ul>
+
+  <p>
+    You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}
+  </p>
 {% endblock %}

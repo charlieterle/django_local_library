@@ -144,7 +144,10 @@ class BookInstance(models.Model):
 
     class Meta:
         ordering = ['due_back']
-        permissions = (("can_view_library_loaned_books", "View all loaned books from library"),)
+        permissions = (
+            ("can_view_library_loaned_books", "View all loaned books from library"),
+            ("can_renew_books", "Renew books for library users"),
+        )
 
     def __str__(self):
         return f'{self.id} ({self.book.title})'
